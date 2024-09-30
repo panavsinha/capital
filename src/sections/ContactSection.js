@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import SocialLinks from './../components/social/SocialLinks';
 
-import { db } from '../config/firebaseConfig';
-import { addDoc, collection } from 'firebase/firestore';
+// import { db } from '../config/firebaseConfig';
+// import { addDoc, collection } from 'firebase/firestore';
 import brochure from '../components/hero/assets/Brochure.pdf'
 
 const ContactSection = () => {
@@ -18,7 +18,7 @@ const ContactSection = () => {
         message: ""
     })
 
-    const contactCollection = collection(db, "contactdata");
+    // const contactCollection = collection(db, "contactdata");
 
     const handleChange = (e) => {
         // console.log("typed!!")
@@ -39,12 +39,12 @@ const ContactSection = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        addDoc(contactCollection, {
-            name: formData.name,
-            email: formData.email,
-            subject: formData.subject,
-            message: formData.message,
-        })
+        // addDoc(contactCollection, {
+        //     name: formData.name,
+        //     email: formData.email,
+        //     subject: formData.subject,
+        //     message: formData.message,
+        // })
         // console.log(e);
 
         // const { name, email, subject, message } = formData;
